@@ -79,7 +79,7 @@ li::before {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background-image: url("/final-zengarden/images/star.png");
+  background-image: url("./images/star.png");
   background-size: cover;
 }
 
@@ -129,7 +129,7 @@ header::before {
 header::after {
   content: "";
   display: block;
-  background-image: url("/final-zengarden/images/icons8-hang-80.-copypng.png");
+  background-image: url("./images/icons8-hang-80.-copypng.png");
   background-size: 90px 90px;
   background-repeat: no-repeat;
   width: 80px;
@@ -245,7 +245,7 @@ ul {
 
 .main > div::before {
   content: "";
-  background: #ffbd59 url("/final-zengarden/images/star.png") no-repeat;
+  background: #ffbd59 url("./images/star.png") no-repeat;
   background-size: cover;
   float: right;
   width: 70px;
@@ -359,7 +359,7 @@ aside > .wrapper > div {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("/final-zengarden/images/link.png");
+  background-image: url("./images/link.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 150px;
