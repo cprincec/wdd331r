@@ -25,7 +25,7 @@
     -webkit-transform: scaleX(-1) rotate(265deg) !important;
     transform: scaleX(-1) rotate(265deg) !important;
     @include atoms.breakpoint($md-scr) {
-        right: -5%;
+        right: -1%;
     }
 }
 

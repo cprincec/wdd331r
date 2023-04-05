@@ -378,7 +378,7 @@ aside > .wrapper > div {
 }
 @media (min-width: 32em) {
   .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
-    right: -5%;
+    right: -1%;
   }
 }
 
