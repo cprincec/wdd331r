@@ -17,6 +17,9 @@
     bottom: -60px;
     z-index: 9999;
     left: -5%;
+    @include atoms.breakpoint($md-scr) {
+        left: -1%;
+    }
 }
 
 .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {

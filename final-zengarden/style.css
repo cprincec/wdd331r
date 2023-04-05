@@ -369,6 +369,11 @@ aside > .wrapper > div {
   z-index: 9999;
   left: -5%;
 }
+@media (min-width: 32em) {
+  .main > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
+    left: -1%;
+  }
+}
 
 .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
   right: -10%;
