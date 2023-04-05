@@ -43,7 +43,7 @@
 
 .main > div::before {
     content: '';
-    background: $accent3 url("../images/star.png") no-repeat;
+    background: $accent3 url("./images/star.png") no-repeat;
     background-size: cover;
     float: right;
     width: 70px;
