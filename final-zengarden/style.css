@@ -376,6 +376,11 @@ aside > .wrapper > div {
   -webkit-transform: scaleX(-1) rotate(265deg) !important;
   transform: scaleX(-1) rotate(265deg) !important;
 }
+@media (min-width: 32em) {
+  .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
+    right: -5%;
+  }
+}
 
 .summary {
   font-size: 1.25rem;
