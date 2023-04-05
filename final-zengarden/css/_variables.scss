@@ -1,0 +1,50 @@
+/********* FONTS ***************/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&family=Dancing+Script&display=swap');
+
+$fonts-headline: "Anton", sans-serif;
+$fonts-headline-2: "Dancing Script", cursive;
+$fonts-body: "DM Sans", sans-serif;
+
+/********* FONTS ENDS ***************/
+
+
+/********* COLOURS STARTS ***************/
+
+$background-color: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+$primary: #d9d9d9;
+$accent1: #2f187b;
+$accent2: #a2dfd9;
+$accent3: #ffbd59;
+$text-light: #fff;
+
+/********* COLOURS ENDS ***************/
+
+
+
+/********* SIZES STARTS ***************/
+$root-fs: 18px;
+$tiny: .25rem;
+$small: .5rem;
+$medium: .75rem;
+$inter: 1rem;
+$large: 1.25rem;
+$xlarge: 1.5rem;
+$xxlarge: 2rem;
+$xxxlarge: 3rem;
+$wide: 5rem;
+
+$md-scr: 32em;
+$lg-scr: 64em;
+
+/********* SIZES ENDS ***************/
+
+
+
+/********* WEIGHTS STARTS ***************/
+
+$light: 400;
+$bold: 600;
+$bolder: 900;
+
+/********* WEIGHTS ENDS ***************/
+

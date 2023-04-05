@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&family=Dancing+Script&display=swap");
+h2,
+h3,
+h4 {
+  font-family: "Anton", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  background-color: #2f187b;
+  color: #fff;
+  display: inline-block;
+  font-weight: 900;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  color: #fff;
+  font-size: 6em;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin-bottom: 0.1em;
+}
+
+h3 {
+  font-size: 2.25em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 0.5em 0 0.25em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid #ffbd59;
+  color: #ffbd59;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+a:hover {
+  border-color: #d9d9d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #d9d9d9;
+  padding: 5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 100%;
+  color: #fff;
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  margin: 0;
+  padding: 1em;
+}
+
+section {
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  padding: 1em;
+  margin: 1em;
+}
+
+.h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1em;
+  line-height: normal;
+}
+
+.colors {
+  display: flex;
+  flex-flow: row wrap;
+}
+.colors > h3 {
+  width: 100%;
+  flex: 1 0 100%;
+}
+.colors > figure {
+  margin: 0;
+  flex: 1 1 25%;
+}
+
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+
+.primary {
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+}
+
+.accent1 {
+  background-color: #2f187b;
+}
+
+.accent2 {
+  background-color: #a2dfd9;
+}
+
+.accent3 {
+  background-color: #ffbd59;
+}
+
+.text-light {
+  background-color: #fff;
+}
+
+.element {
+  border: 1px solid;
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.uppercase {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.uppercase-light {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.wireframe {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.wireframe img {
+  width: 70%;
+}
+
+.wireframe a {
+  justify-self: flex-start;
+  border-bottom: none;
+  margin-bottom: 1em;
+}
+
+/*# sourceMappingURL=style-pattern.css.map */

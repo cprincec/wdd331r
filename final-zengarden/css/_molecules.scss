@@ -1,0 +1,125 @@
+@use 'variables' as *;
+@use 'atoms';
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include atoms.breakpoint($lg-scr) {
+        grid-column: 1 / -1;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: .1px;
+        height: 93%;
+        top: 1%;
+        right: 25%;
+        border-right: $medium dashed $accent1;
+        background: $primary;
+        z-index: -1;
+
+        @include atoms.breakpoint($md-scr) {
+            right: 25%;
+            height: 92%;
+            
+        }
+
+        @include atoms.breakpoint($lg-scr) {
+            top: 5%;
+            right: 35%;
+            height: 92%;
+            border-right: $small dotted $accent1;
+            
+        }
+    }
+}
+
+header::after {
+    content: "";
+    display: block;
+    background-image: url("/final-zengarden/images/icons8-hang-80.-copypng.png");
+    background-size: 90px 90px;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 95px;
+    transform: rotate(5deg);
+    z-index: -1;
+    margin-top: -$medium;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    padding: $inter 0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    bottom: 0;
+
+    @include atoms.breakpoint($lg-scr) {
+        // left: 0;
+        // right: 20%;
+        width: 600px;
+        left: initial;
+        bottom: 0;
+        right: $wide + $small;
+
+
+    }
+
+}
+
+footer>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $small $large - $tiny;
+    font-size: $large;
+    font-weight: $bolder;
+    color: $accent1;
+    text-decoration: underline dotted $accent3;
+}
+
+
+footer>a:nth-child(odd) {
+    background: $primary;
+    border-top: $tiny solid $primary;
+    border-bottom: $tiny solid $primary;
+}
+
+footer>a:nth-child(even) {
+    color: $primary;
+    background: $accent1;
+    border-top: $inter solid $accent1;
+    border-bottom: $inter solid $accent1;
+}
+
+footer>a:nth-child(3) {
+    border-top: $xlarge solid $primary;
+    border-bottom: $xlarge solid $primary;
+}
+
+
+body {
+    font-family: $fonts-body;
+    font-size: $root-fs;
+    background: $background-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $text-light;
+    padding: $inter;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}

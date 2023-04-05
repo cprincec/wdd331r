@@ -1,0 +1,84 @@
+@use 'variables' as *;
+@use 'atoms';
+@use 'molecules';
+@use 'organisms';
+
+
+.main > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("/final-zengarden/images/link.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 50px;
+    transform: rotate(265deg);
+    bottom: -60px;
+    z-index: 9999;
+    left: -5%;
+}
+
+.main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
+    right: -5px;
+    left: inherit !important;
+}
+
+.summary {
+    font-size: $large;
+    background: $accent3;
+    color: $accent1;
+    padding: $inter $inter 0 $inter;
+    z-index: 99;
+    margin-top: -$xlarge;
+    margin-bottom: $wide;
+    box-shadow: inset 0 0 10px 1px;
+    border-radius: 5%;
+    max-width: 500px;
+    position: relative;
+    p {
+        color: $accent1;
+    }
+    & > p:last-of-type {
+        background: $accent1;
+        margin-bottom: 5px;
+        color: $text-light;
+        padding: $small;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+    }
+    @include atoms.breakpoint($lg-scr) {
+        grid-column: 1 / -1;
+        max-width: 700px;
+        align-self: flex-start;
+        justify-self: center;
+        margin-left: -$wide;
+        border-radius: 0;
+        padding: $large;        
+}
+&::before {
+    content: "By: Prince C. Chukwu";
+    position: absolute;
+    font-family: $fonts-headline-2;
+    color: $primary;
+    top: -$xxxlarge;
+    left: $xxxlarge + $large;
+    font-weight: $bold;
+    @include atoms.breakpoint($md-scr) {
+        left: $wide + $wide;
+    }
+} 
+}
+
+@keyframes dangle {
+    0%{
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
