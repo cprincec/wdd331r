@@ -371,8 +371,10 @@ aside > .wrapper > div {
 }
 
 .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
-  right: -5px;
+  right: -10%;
   left: inherit !important;
+  -webkit-transform: scaleX(-1) rotate(265deg) !important;
+  transform: scaleX(-1) rotate(265deg) !important;
 }
 
 .summary {
