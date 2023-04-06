@@ -4,34 +4,6 @@
 @use 'organisms';
 
 
-.main > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background-image: url("./images/link.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 150px;
-    height: 50px;
-    transform: rotate(265deg);
-    bottom: -60px;
-    z-index: 9999;
-    left: -5%;
-    @include atoms.breakpoint($md-scr) {
-        left: -1%;
-    }
-}
-
-.main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
-    right: -10%;
-    left: inherit !important;
-    -webkit-transform: scaleX(-1) rotate(265deg) !important;
-    transform: scaleX(-1) rotate(265deg) !important;
-    @include atoms.breakpoint($md-scr) {
-        right: -1%;
-    }
-}
-
 .summary {
     font-size: $large;
     background: $accent3;
@@ -44,17 +16,7 @@
     border-radius: 5%;
     max-width: 500px;
     position: relative;
-    p {
-        color: $accent1;
-    }
-    & > p:last-of-type {
-        background: $accent1;
-        margin-bottom: 5px;
-        color: $text-light;
-        padding: $small;
-        border-radius: 10px 10px 0 0;
-        text-align: center;
-    }
+
     @include atoms.breakpoint($lg-scr) {
         grid-column: 1 / -1;
         max-width: 700px;
@@ -63,30 +25,58 @@
         margin-left: -$wide;
         border-radius: 0;
         padding: $large;        
-}
-&::before {
-    content: "By: Prince C. Chukwu";
-    position: absolute;
-    font-family: $fonts-headline-2;
-    color: $primary;
-    top: -$xxxlarge;
-    left: $xxxlarge + $large;
-    font-weight: $bold;
-    @include atoms.breakpoint($md-scr) {
-        left: $wide + $wide;
     }
-} 
+    
+    p {
+        color: $accent1;
+    }
+
+    & > p:last-of-type {
+        background: $accent1;
+        margin-bottom: 5px;
+        color: $text-light;
+        padding: $small;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+    }
+    
+    &::before {
+        content: "By: Prince C. Chukwu";
+        position: absolute;
+        font-family: $fonts-headline-2;
+        color: $primary;
+        top: -$xxxlarge;
+        left: $xxxlarge + $large;
+        font-weight: $bold;
+        @include atoms.breakpoint($md-scr) {
+            left: $wide + $wide;
+        }
+    } 
 }
 
-@keyframes dangle {
-    0%{
-        transform: rotate(0deg);
+.preamble {
+    background: $background-color;
+    padding: $inter;
+    @include atoms.breakpoint($lg-scr) {
+        grid-column: 2 / -1;  
+        grid-row: 3 / 4; 
+        max-width: 600px;
+        justify-self: center;
     }
-    50% {
-        transform: rotate(2deg);
+    h3 {
+        text-align: center;
     }
-    100% {
-        transform: rotate(0deg);
-    }
+}
+
+
+/********** Scroll Bar **********/
+::-webkit-scrollbar {
+    background: inherit;
+    width: $small;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $accent1;
+    border-radius: 40px;
 }
 

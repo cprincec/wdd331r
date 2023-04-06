@@ -22,47 +22,7 @@
     }
 }
 
-.main {
-    @include atoms.breakpoint($lg-scr) {
-        grid-column: 2 / -1;
-        grid-row: 4 / span 2;
-        margin-right: $xxxlarge;
-        margin-left: $xxxlarge;
-        position: relative;
-    }
-}
-
-.main > div {
-    background-color: $accent1;
-    margin-top: $wide;
-    margin-bottom: $wide + $inter;
-    padding: $xxxlarge $large;
-    border-radius: $medium;
-    position: relative;
-}
-
-.main > div::before {
-    content: '';
-    background: $accent3 url("./images/star.png") no-repeat;
-    background-size: cover;
-    float: right;
-    width: 70px;
-    height: 70px;
-    z-index: 99;
-    margin: $inter $large;
-    border-radius: 50%;
-}
-
-.main > div:last-of-type {
-    @include atoms.breakpoint($lg-scr) {
-        margin-bottom: $wide + $wide + $wide;
-    } 
-}
-
-.main > div:nth-child(odd)::before {
-    float: left;
-}
-
+// Assign numbering using sass loop.   
 @for $i from 1 through 4 {
     .main > div:nth-of-type(#{$i})::after {
         content: "#{$i}";
@@ -72,64 +32,124 @@
     }
 }
 
-.main > div::after {
-    position: absolute;
-    top: $xxxlarge - $tiny;
-    left: $xxlarge + $tiny;
-    background-color: $accent1;
-    padding: $small $inter;
-    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-}
-
-.main > div:nth-of-type(even)::after {
-    right: $xxlarge;
-    left: inherit;
-}
-
-.preamble {
-    background: $background-color;
-    padding: $inter;
+.main {
     @include atoms.breakpoint($lg-scr) {
-        grid-column: 2 / -1;  
-        grid-row: 3 / 4; 
-        max-width: 600px;
-        justify-self: center;
+        grid-column: 2 / -1;
+        grid-row: 4 / span 2;
+        margin-right: $xxxlarge;
+        margin-left: $xxxlarge;
+        position: relative;
     }
-    h3 {
-        text-align: center;
+
+    
+    & > div {
+        background-color: $accent1;
+        margin-top: $wide;
+        margin-bottom: $wide + $inter;
+        padding: $xxxlarge $large;
+        border-radius: $medium;
+        position: relative;
+    }
+
+    & > div::before {
+        content: '';
+        background: $accent3 url("./images/star.png") no-repeat;
+        background-size: cover;
+        float: right;
+        width: 70px;
+        height: 70px;
+        z-index: 99;
+        margin: $inter $large;
+        border-radius: 50%;
+    }
+
+    & > div::after {
+        position: absolute;
+        top: $xxxlarge - $tiny;
+        left: $xxlarge + $tiny;
+        background-color: $accent1;
+        padding: $small $inter;
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    & > div:last-of-type {
+        @include atoms.breakpoint($lg-scr) {
+            margin-bottom: $wide + $wide + $wide;
+        } 
+    }
+
+    & > div:nth-child(odd)::before {
+        float: left;
+    }
+
+
+
+    & > div:nth-of-type(even)::after {
+        right: $xxlarge;
+        left: inherit;
+    }
+
+    & > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url("./images/link.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 150px;
+        height: 50px;
+        transform: rotate(265deg);
+        bottom: -60px;
+        z-index: 9999;
+        left: -5%;
+        @include atoms.breakpoint($md-scr) {
+            left: -1%;
+        }
+    }
+    
+    & > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
+        right: -10%;
+        left: inherit !important;
+        -webkit-transform: scaleX(-1) rotate(265deg) !important;
+        transform: scaleX(-1) rotate(265deg) !important;
+        @include atoms.breakpoint($md-scr) {
+            right: -1%;
+        }
     }
 }
 
 
 aside {
     margin-bottom: $wide + $wide;
-    @include atoms.breakpoint($lg-scr) {
-        grid-column: 1 / 2;
-        grid-row: 3 / span 3;
-        align-self: flex-start;
-        position: sticky;
-        top: 0;
-        max-height: 100vh;
-        overflow-y: auto;
-    }
-}
-
-aside > .wrapper > div {
-    background: $background-color;
-    padding: $inter;
-    margin: $large 0;
-    @include atoms.breakpoint($lg-scr) {
-        padding: $inter 0 $inter $small;
+        @include atoms.breakpoint($lg-scr) {
+            grid-column: 1 / 2;
+            grid-row: 3 / span 3;
+            align-self: flex-start;
+            position: sticky;
+            top: 0;
+            max-height: 100vh;
+            overflow-y: auto;
     }
 
-}
-
-aside > .wrapper > div:first-of-type {
-    @include atoms.breakpoint($lg-scr) {
-        margin-top: 0;
-    }
+    & > .wrapper > div {
+            background: $background-color;
+            padding: $inter;
+            margin: $large 0;
+            @include atoms.breakpoint($lg-scr) {
+                padding: $inter 0 $inter $small;
+        }
     
+    }
+
+    & > .wrapper > div:first-of-type {
+            @include atoms.breakpoint($lg-scr) {
+                margin-top: 0;
+        }
+        
+    }
 }
+
+
 
 
 

@@ -56,10 +56,9 @@ h3 {
 a {
     color: $accent3;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 p {
@@ -74,20 +73,18 @@ li {
     display: flex;
     align-items: center;
     column-gap: $tiny;
+    font-size: $inter;
+    a {
+        font-size: .9rem;
+    }
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url("./images/star.png");
+        background-size: cover;
+    }
 }
-
-li::before {
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url("./images/star.png");
-    background-size: cover;
-}
-
-li a {
-    font-size: .9rem;
-}
-
 
 

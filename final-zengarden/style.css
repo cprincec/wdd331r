@@ -55,7 +55,6 @@ a {
   color: #ffbd59;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -72,8 +71,11 @@ li {
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
+  font-size: 1rem;
 }
-
+li a {
+  font-size: 0.9rem;
+}
 li::before {
   content: "";
   display: inline-block;
@@ -81,10 +83,6 @@ li::before {
   height: 15px;
   background-image: url("./images/star.png");
   background-size: cover;
-}
-
-li a {
-  font-size: 0.9rem;
 }
 
 header {
@@ -125,7 +123,6 @@ header::before {
     border-right: 0.5rem dotted #2f187b;
   }
 }
-
 header::after {
   content: "";
   display: block;
@@ -159,7 +156,6 @@ footer {
     right: 5.5rem;
   }
 }
-
 footer > a {
   display: flex;
   align-items: center;
@@ -170,20 +166,17 @@ footer > a {
   color: #2f187b;
   text-decoration: underline dotted #ffbd59;
 }
-
 footer > a:nth-child(odd) {
   background: #d9d9d9;
   border-top: 0.25rem solid #d9d9d9;
   border-bottom: 0.25rem solid #d9d9d9;
 }
-
 footer > a:nth-child(even) {
   color: #d9d9d9;
   background: #2f187b;
   border-top: 1rem solid #2f187b;
   border-bottom: 1rem solid #2f187b;
 }
-
 footer > a:nth-child(3) {
   border-top: 1.5rem solid #d9d9d9;
   border-bottom: 1.5rem solid #d9d9d9;
@@ -224,47 +217,6 @@ ul {
   }
 }
 
-@media (min-width: 64em) {
-  .main {
-    grid-column: 2/-1;
-    grid-row: 4/span 2;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    position: relative;
-  }
-}
-
-.main > div {
-  background-color: #2f187b;
-  margin-top: 5rem;
-  margin-bottom: 6rem;
-  padding: 3rem 1.25rem;
-  border-radius: 0.75rem;
-  position: relative;
-}
-
-.main > div::before {
-  content: "";
-  background: #ffbd59 url("./images/star.png") no-repeat;
-  background-size: cover;
-  float: right;
-  width: 70px;
-  height: 70px;
-  z-index: 99;
-  margin: 1rem 1.25rem;
-  border-radius: 50%;
-}
-
-@media (min-width: 64em) {
-  .main > div:last-of-type {
-    margin-bottom: 15rem;
-  }
-}
-
-.main > div:nth-child(odd)::before {
-  float: left;
-}
-
 .main > div:nth-of-type(1)::after {
   content: "1";
   color: #ffbd59;
@@ -293,6 +245,34 @@ ul {
   font-size: 1.25rem;
 }
 
+@media (min-width: 64em) {
+  .main {
+    grid-column: 2/-1;
+    grid-row: 4/span 2;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    position: relative;
+  }
+}
+.main > div {
+  background-color: #2f187b;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  padding: 3rem 1.25rem;
+  border-radius: 0.75rem;
+  position: relative;
+}
+.main > div::before {
+  content: "";
+  background: #ffbd59 url("./images/star.png") no-repeat;
+  background-size: cover;
+  float: right;
+  width: 70px;
+  height: 70px;
+  z-index: 99;
+  margin: 1rem 1.25rem;
+  border-radius: 50%;
+}
 .main > div::after {
   position: absolute;
   top: 2.75rem;
@@ -301,60 +281,18 @@ ul {
   padding: 0.5rem 1rem;
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
 }
-
+@media (min-width: 64em) {
+  .main > div:last-of-type {
+    margin-bottom: 15rem;
+  }
+}
+.main > div:nth-child(odd)::before {
+  float: left;
+}
 .main > div:nth-of-type(even)::after {
   right: 2rem;
   left: inherit;
 }
-
-.preamble {
-  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
-  padding: 1rem;
-}
-@media (min-width: 64em) {
-  .preamble {
-    grid-column: 2/-1;
-    grid-row: 3/4;
-    max-width: 600px;
-    justify-self: center;
-  }
-}
-.preamble h3 {
-  text-align: center;
-}
-
-aside {
-  margin-bottom: 10rem;
-}
-@media (min-width: 64em) {
-  aside {
-    grid-column: 1/2;
-    grid-row: 3/span 3;
-    align-self: flex-start;
-    position: sticky;
-    top: 0;
-    max-height: 100vh;
-    overflow-y: auto;
-  }
-}
-
-aside > .wrapper > div {
-  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
-  padding: 1rem;
-  margin: 1.25rem 0;
-}
-@media (min-width: 64em) {
-  aside > .wrapper > div {
-    padding: 1rem 0 1rem 0.5rem;
-  }
-}
-
-@media (min-width: 64em) {
-  aside > .wrapper > div:first-of-type {
-    margin-top: 0;
-  }
-}
-
 .main > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
   content: "";
   position: absolute;
@@ -374,7 +312,6 @@ aside > .wrapper > div {
     left: -1%;
   }
 }
-
 .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
   right: -10%;
   left: inherit !important;
@@ -384,6 +321,36 @@ aside > .wrapper > div {
 @media (min-width: 32em) {
   .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
     right: -1%;
+  }
+}
+
+aside {
+  margin-bottom: 10rem;
+}
+@media (min-width: 64em) {
+  aside {
+    grid-column: 1/2;
+    grid-row: 3/span 3;
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+aside > .wrapper > div {
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+@media (min-width: 64em) {
+  aside > .wrapper > div {
+    padding: 1rem 0 1rem 0.5rem;
+  }
+}
+@media (min-width: 64em) {
+  aside > .wrapper > div:first-of-type {
+    margin-top: 0;
   }
 }
 
@@ -400,17 +367,6 @@ aside > .wrapper > div {
   max-width: 500px;
   position: relative;
 }
-.summary p {
-  color: #2f187b;
-}
-.summary > p:last-of-type {
-  background: #2f187b;
-  margin-bottom: 5px;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-}
 @media (min-width: 64em) {
   .summary {
     grid-column: 1/-1;
@@ -421,6 +377,17 @@ aside > .wrapper > div {
     border-radius: 0;
     padding: 1.25rem;
   }
+}
+.summary p {
+  color: #2f187b;
+}
+.summary > p:last-of-type {
+  background: #2f187b;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
 }
 .summary::before {
   content: "By: Prince C. Chukwu";
@@ -437,16 +404,31 @@ aside > .wrapper > div {
   }
 }
 
-@keyframes dangle {
-  0% {
-    transform: rotate(0deg);
+.preamble {
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  padding: 1rem;
+}
+@media (min-width: 64em) {
+  .preamble {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    max-width: 600px;
+    justify-self: center;
   }
-  50% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+}
+.preamble h3 {
+  text-align: center;
+}
+
+/********** Scroll Bar **********/
+::-webkit-scrollbar {
+  background: inherit;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f187b;
+  border-radius: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
