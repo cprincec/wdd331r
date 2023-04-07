@@ -1,0 +1,82 @@
+@use 'variables' as *;
+@use 'atoms';
+@use 'molecules';
+@use 'organisms';
+
+
+.summary {
+    font-size: $large;
+    background: $accent3;
+    color: $accent1;
+    padding: $inter $inter 0 $inter;
+    z-index: 99;
+    margin-top: -$xlarge;
+    margin-bottom: $wide;
+    box-shadow: inset 0 0 10px 1px;
+    border-radius: 5%;
+    max-width: 500px;
+    position: relative;
+
+    @include atoms.breakpoint($lg-scr) {
+        grid-column: 1 / -1;
+        max-width: 700px;
+        align-self: flex-start;
+        justify-self: center;
+        margin-left: -$wide;
+        border-radius: 0;
+        padding: $large;        
+    }
+    
+    p {
+        color: $accent1;
+    }
+
+    & > p:last-of-type {
+        background: $accent1;
+        margin-bottom: 5px;
+        color: $text-light;
+        padding: $small;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+    }
+    
+    &::before {
+        content: "By: Prince C. Chukwu";
+        position: absolute;
+        font-family: $fonts-headline-2;
+        color: $primary;
+        top: -$xxxlarge;
+        left: $xxxlarge + $large;
+        font-weight: $bold;
+        @include atoms.breakpoint($md-scr) {
+            left: $wide + $wide;
+        }
+    } 
+}
+
+.preamble {
+    background: $background-color;
+    padding: $inter;
+    @include atoms.breakpoint($lg-scr) {
+        grid-column: 2 / -1;  
+        grid-row: 3 / 4; 
+        max-width: 600px;
+        justify-self: center;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+
+
+/********** Scroll Bar **********/
+::-webkit-scrollbar {
+    background: inherit;
+    width: $small;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $accent1;
+    border-radius: 40px;
+}
+

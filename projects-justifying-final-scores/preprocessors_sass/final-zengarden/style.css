@@ -1,0 +1,434 @@
+/********* FONTS ***************/
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&family=Dancing+Script&display=swap");
+/********* FONTS ENDS ***************/
+/********* COLOURS STARTS ***************/
+/********* COLOURS ENDS ***************/
+/********* SIZES STARTS ***************/
+/********* SIZES ENDS ***************/
+/********* WEIGHTS STARTS ***************/
+/********* WEIGHTS ENDS ***************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  text-align: right;
+  border-right: 2px solid #ffbd59;
+  padding: 0.75rem;
+  background: #2f187b;
+}
+
+h1, h2 {
+  color: #d9d9d9;
+}
+
+h2 {
+  font-size: 2.25rem;
+  text-align: left;
+  background: #d9d9d9;
+  color: #2f187b;
+  padding: 0.75rem;
+  animation: scroll 2s ease infinite backwards;
+}
+
+@keyframes scroll {
+  from {
+    text-decoration: underline;
+  }
+  to {
+    text-decoration: none;
+  }
+}
+h2, h3, h4, h5 {
+  font-family: "Dancing Script", cursive;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+a {
+  color: #ffbd59;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.5;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #d9d9d9;
+}
+
+li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  font-size: 1rem;
+}
+li a {
+  font-size: 0.9rem;
+}
+li::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("./images/star.png");
+  background-size: cover;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  header {
+    grid-column: 1/-1;
+  }
+}
+header::before {
+  position: absolute;
+  content: "";
+  width: 0.1px;
+  height: 93%;
+  top: 1%;
+  right: 25%;
+  border-right: 0.75rem dashed #2f187b;
+  background: #d9d9d9;
+  z-index: -1;
+}
+@media (min-width: 32em) {
+  header::before {
+    right: 25%;
+    height: 92%;
+  }
+}
+@media (min-width: 64em) {
+  header::before {
+    top: 5%;
+    right: 35%;
+    height: 92%;
+    border-right: 0.5rem dotted #2f187b;
+  }
+}
+header::after {
+  content: "";
+  display: block;
+  background-image: url("./images/icons8-hang-80.-copypng.png");
+  background-size: 90px 90px;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 95px;
+  transform: rotate(5deg);
+  z-index: -1;
+  margin-top: -0.75rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 80%;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -40%;
+  bottom: 0;
+}
+@media (min-width: 64em) {
+  footer {
+    width: 600px;
+    left: initial;
+    bottom: 0;
+    right: 5.5rem;
+  }
+}
+footer > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #2f187b;
+  text-decoration: underline dotted #ffbd59;
+}
+footer > a:nth-child(odd) {
+  background: #d9d9d9;
+  border-top: 0.25rem solid #d9d9d9;
+  border-bottom: 0.25rem solid #d9d9d9;
+}
+footer > a:nth-child(even) {
+  color: #d9d9d9;
+  background: #2f187b;
+  border-top: 1rem solid #2f187b;
+  border-bottom: 1rem solid #2f187b;
+}
+footer > a:nth-child(3) {
+  border-top: 1.5rem solid #d9d9d9;
+  border-bottom: 1.5rem solid #d9d9d9;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (min-width: 64em) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 200px 350px auto 300px 1fr;
+    column-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .intro {
+    grid-column: 1/-1;
+    grid-row: 1/4;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 200px 270px 1fr;
+    padding-top: 5rem;
+  }
+}
+
+.main > div:nth-of-type(1)::after {
+  content: "1";
+  color: #ffbd59;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.main > div:nth-of-type(2)::after {
+  content: "2";
+  color: #ffbd59;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.main > div:nth-of-type(3)::after {
+  content: "3";
+  color: #ffbd59;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.main > div:nth-of-type(4)::after {
+  content: "4";
+  color: #ffbd59;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 64em) {
+  .main {
+    grid-column: 2/-1;
+    grid-row: 4/span 2;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    position: relative;
+  }
+}
+.main > div {
+  background-color: #2f187b;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  padding: 3rem 1.25rem;
+  border-radius: 0.75rem;
+  position: relative;
+}
+.main > div::before {
+  content: "";
+  background: #ffbd59 url("./images/star.png") no-repeat;
+  background-size: cover;
+  float: right;
+  width: 70px;
+  height: 70px;
+  z-index: 99;
+  margin: 1rem 1.25rem;
+  border-radius: 50%;
+}
+.main > div::after {
+  position: absolute;
+  top: 2.75rem;
+  left: 2.25rem;
+  background-color: #2f187b;
+  padding: 0.5rem 1rem;
+  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+}
+@media (min-width: 64em) {
+  .main > div:last-of-type {
+    margin-bottom: 15rem;
+  }
+}
+.main > div:nth-child(odd)::before {
+  float: left;
+}
+.main > div:nth-of-type(even)::after {
+  right: 2rem;
+  left: inherit;
+}
+.main > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("./images/link.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 50px;
+  transform: rotate(265deg);
+  bottom: -60px;
+  z-index: 9999;
+  left: -5%;
+}
+@media (min-width: 32em) {
+  .main > div > p:last-of-type:not(.main > div:last-of-type > p:last-of-type)::after {
+    left: -1%;
+  }
+}
+.main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
+  right: -10%;
+  left: inherit !important;
+  -webkit-transform: scaleX(-1) rotate(265deg) !important;
+  transform: scaleX(-1) rotate(265deg) !important;
+}
+@media (min-width: 32em) {
+  .main > div:nth-child(even):not(:last-of-type) > p:last-of-type::after {
+    right: -1%;
+  }
+}
+
+aside {
+  margin-bottom: 10rem;
+}
+@media (min-width: 64em) {
+  aside {
+    grid-column: 1/2;
+    grid-row: 3/span 3;
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+aside > .wrapper > div {
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+@media (min-width: 64em) {
+  aside > .wrapper > div {
+    padding: 1rem 0 1rem 0.5rem;
+  }
+}
+@media (min-width: 64em) {
+  aside > .wrapper > div:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.summary {
+  font-size: 1.25rem;
+  background: #ffbd59;
+  color: #2f187b;
+  padding: 1rem 1rem 0 1rem;
+  z-index: 99;
+  margin-top: -1.5rem;
+  margin-bottom: 5rem;
+  box-shadow: inset 0 0 10px 1px;
+  border-radius: 5%;
+  max-width: 500px;
+  position: relative;
+}
+@media (min-width: 64em) {
+  .summary {
+    grid-column: 1/-1;
+    max-width: 700px;
+    align-self: flex-start;
+    justify-self: center;
+    margin-left: -5rem;
+    border-radius: 0;
+    padding: 1.25rem;
+  }
+}
+.summary p {
+  color: #2f187b;
+}
+.summary > p:last-of-type {
+  background: #2f187b;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+.summary::before {
+  content: "By: Prince C. Chukwu";
+  position: absolute;
+  font-family: "Dancing Script", cursive;
+  color: #d9d9d9;
+  top: -3rem;
+  left: 4.25rem;
+  font-weight: 600;
+}
+@media (min-width: 32em) {
+  .summary::before {
+    left: 10rem;
+  }
+}
+
+.preamble {
+  background: linear-gradient(210deg, #2346b5, #593ea1, #b102a6);
+  padding: 1rem;
+}
+@media (min-width: 64em) {
+  .preamble {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    max-width: 600px;
+    justify-self: center;
+  }
+}
+.preamble h3 {
+  text-align: center;
+}
+
+/********** Scroll Bar **********/
+::-webkit-scrollbar {
+  background: inherit;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f187b;
+  border-radius: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
